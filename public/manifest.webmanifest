@@ -1,0 +1,16 @@
+{
+  "name": "Sumasri Durga Portfolio",
+  "short_name": "Portfolio",
+  "description": "AI and full stack developer portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}
