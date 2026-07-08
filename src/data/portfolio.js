@@ -194,12 +194,14 @@ export const education = [
     university: "GSR Junior College,Pippara",
     degree: "Intermediate in MPC",
     cgpa: "967 / 1000",
+    metricLabel: "Marks",
     graduation: "2023"
   },
   {
     university: "ZPH school ,Pali, Attili mandal, West Godavari",
     degree: "SSC",
     cgpa: "534 / 600",
+    metricLabel: "Marks",
     graduation: "2021"
   }
 

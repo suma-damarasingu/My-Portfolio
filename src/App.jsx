@@ -456,7 +456,7 @@ function EducationAndProfiles() {
                 <h3 className="text-xl font-bold text-white">{item.university}</h3>
                 <p className="mt-1 text-slate-300">{item.degree}</p>
                 <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                  <div className="stat-box"><span>CGPA</span><strong>{item.cgpa}</strong></div>
+                  <div className="stat-box"><span>{item.metricLabel || "CGPA"}</span><strong>{item.cgpa}</strong></div>
                   <div className="stat-box"><span>Graduation</span><strong>{item.graduation}</strong></div>
                 </div>
                 {item.coursework ? (
