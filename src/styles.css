@@ -18,6 +18,15 @@
 
 .light {
   color-scheme: light;
+  --bg: #f4f7fb;
+  --panel: rgba(255, 255, 255, 0.92);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --line: rgba(15, 23, 42, 0.12);
+  --line-strong: rgba(15, 23, 42, 0.16);
+  --text-soft: #475569;
+  --cyan: #0891b2;
+  --blue: #2563eb;
+  --violet: #7c3aed;
 }
 
 body {
@@ -69,7 +78,17 @@ textarea:focus-visible {
 
 .light body,
 .light .bg-ink {
-  background: #f8fafc;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(37, 99, 235, 0.14), transparent 28rem),
+    radial-gradient(circle at 82% 14%, rgba(124, 58, 237, 0.12), transparent 26rem),
+    radial-gradient(circle at 50% 96%, rgba(8, 145, 178, 0.1), transparent 32rem),
+    var(--bg);
+  color: #0f172a;
+}
+
+.light body::selection {
+  color: white;
+  background: rgba(8, 145, 178, 0.26);
 }
 
 .light .text-white {
@@ -77,17 +96,173 @@ textarea:focus-visible {
 }
 
 .light .text-slate-300,
-.light .text-slate-400 {
+.light .text-slate-400,
+.light .text-slate-200 {
   color: #475569;
 }
 
-.light .glass-panel,
 .light header,
+.light .glass-panel,
+.light .search-box,
 .light .field input,
 .light .field textarea,
-.light .search-box {
+.light .stat-box,
+.light .footer-shell {
   border-color: rgba(15, 23, 42, 0.12);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
+}
+
+.light header {
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(24px);
+}
+
+.light .mobile-menu {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
+}
+
+.light .brand-mark {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.64), 0 12px 32px rgba(37, 99, 235, 0.16);
+}
+
+.light .section-title {
+  color: #0f172a;
+}
+
+.light .section-eyebrow {
+  color: #2563eb;
+}
+
+.light .section-shell::before {
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.16), transparent);
+}
+
+.light .glass-panel {
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.light .glass-panel::before {
+  opacity: 0.64;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), transparent 46%, rgba(124, 58, 237, 0.05));
+}
+
+.light .interactive-card:hover,
+.light .project-card:hover {
+  border-color: rgba(37, 99, 235, 0.18);
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(37, 99, 235, 0.06);
+}
+
+.light .btn-primary {
+  background: linear-gradient(135deg, #0891b2 0%, #2563eb 48%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.2);
+}
+
+.light .btn-secondary {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.light .btn-primary:hover,
+.light .btn-secondary:hover,
+.light .chip:hover,
+.light .icon-btn:hover,
+.light .social-link:hover {
+  border-color: rgba(37, 99, 235, 0.24);
+  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.15);
+}
+
+.light .nav-link {
+  color: #334155;
+}
+
+.light .nav-link:hover,
+.light .nav-link-active {
+  background: rgba(37, 99, 235, 0.08);
+  color: #0f172a;
+}
+
+.light .icon-btn,
+.light .social-link {
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.light .pill,
+.light .tag,
+.light .chip {
+  border-color: rgba(37, 99, 235, 0.16);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.08));
+  color: #1d4ed8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.light .chip-active {
+  border-color: rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(124, 58, 237, 0.12));
+  color: #1e3a8a;
+}
+
+.light .field {
+  color: #475569;
+}
+
+.light .search-box {
+  color: #475569;
+}
+
+.light .search-box input,
+.light .field input,
+.light .field textarea {
+  color: #0f172a;
+}
+
+.light .field input:focus,
+.light .field textarea:focus,
+.light .search-box:focus-within {
+  border-color: rgba(37, 99, 235, 0.28);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12), 0 16px 36px rgba(15, 23, 42, 0.08);
+}
+
+.light .stat-box {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+}
+
+.light .stat-box span {
+  color: #64748b;
+}
+
+.light .stat-box strong {
+  color: #0f172a;
+}
+
+.light .certificate-art {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(124, 58, 237, 0.08));
+}
+
+.light .project-image-wrap::after {
+  background: linear-gradient(180deg, transparent 42%, rgba(15, 23, 42, 0.16));
+}
+
+.light .footer-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98));
+  border-color: rgba(15, 23, 42, 0.1);
+  color: #475569;
+}
+
+.light .footer-shell a {
+  color: #334155;
+}
+
+.light .footer-shell a:hover {
+  color: #0f172a;
 }
 
 .site-shell {

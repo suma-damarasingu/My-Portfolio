@@ -205,12 +205,3 @@ export const education = [
 
 ];
 
-export const blogPosts = [
-  ["Building RAG Apps as a Student", "Practical notes on embeddings, vector databases, and answer grounding.", "AI"],
-  ["React Patterns I Use in Projects", "Reusable components, route structure, and performance-friendly UI state.", "Web"],
-  ["How I Prepare for Coding Contests", "A simple system for practice, revision, and contest reviews.", "DSA"]
-];
-
-export const testimonials = [
-  ["Teammate", "Reliable collaborator with a sharp eye for product details and code quality."]
-];

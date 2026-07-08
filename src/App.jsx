@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import {
   achievements,
-  blogPosts,
   certifications,
   education,
   profiles,
@@ -31,11 +30,10 @@ import {
   skills,
   socials,
   student,
-  testimonials,
   timeline
 } from "./data/portfolio.js";
 
-const navItems = ["home", "about", "skills", "projects", "experience", "education", "blog", "contact"];
+const navItems = ["home", "about", "skills", "projects", "experience", "education", "contact"];
 const typingWords = ["Full Stack Developer", "Gen AI Explorer", "React Builder", "Problem Solver"];
 
 function Section({ id, eyebrow, title, children }) {
@@ -380,11 +378,6 @@ function Projects() {
                     <Github size={17} /> GitHub
                   </a>
                 ) : null}
-                {project.demo ? (
-                  <a className="btn-primary" href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`View live demo for ${project.title}`}>
-                    <ExternalLink size={17} /> Live Demo
-                  </a>
-                ) : null}
               </div>
             </div>
           </motion.article>
@@ -495,30 +488,6 @@ function EducationAndProfiles() {
             </motion.a>
           ))}
         </div>
-      </div>
-    </Section>
-  );
-}
-
-function BlogAndTestimonials() {
-  return (
-    <Section id="blog" eyebrow="Insights & Feedback" title="Sharing knowledge and professional feedback">
-      <div className="grid gap-5 lg:grid-cols-3">
-        {blogPosts.map(([title, text, category]) => (
-          <article className="glass-panel interactive-card p-5 sm:p-6" key={title}>
-            <span className="tag">{category}</span>
-            <h3 className="mt-4 text-lg font-bold text-white">{title}</h3>
-            <p className="mt-3 leading-7 text-slate-300">{text}</p>
-          </article>
-        ))}
-      </div>
-      <div className="mt-6 grid gap-5 md:grid-cols-3">
-        {testimonials.map(([person, quote]) => (
-          <blockquote className="glass-panel interactive-card p-5 sm:p-6" key={person}>
-            <p className="leading-7 text-slate-300">"{quote}"</p>
-            <footer className="mt-4 font-semibold text-white">{person}</footer>
-          </blockquote>
-        ))}
       </div>
     </Section>
   );
@@ -708,7 +677,6 @@ function App() {
         <Projects />
         <Experience />
         <EducationAndProfiles />
-        <BlogAndTestimonials />
         <Contact />
       </main>
       <footer className="footer-shell border-t border-white/10 px-4 py-12 text-center text-sm text-slate-400">
