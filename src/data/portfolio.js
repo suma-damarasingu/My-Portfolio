@@ -164,7 +164,7 @@ export const timeline = [
 ];
 
 export const certifications = [
-  ["NPTEL", "Internet of Things", "April 2026", Award,"swayam.pdf"],
+  ["NPTEL", "Internet of Things", "April 2026", Award,"https://www.linkedin.com/posts/sumasri-damarasingu-808a91297_nptel-swayam-topper-share-7480450315323068417-Mfsy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEfijEgBHEjEXG-ycAxww9Lvw1Io26U8vzg"],
   ["Simplilearn", "Introduction to Cyber Security", "Nov 2025", BrainCircuit,"https://simpli-web.app.link/e/HZlQ0TXJu4b"],
   ["Simplilearn", "Fundamentals of SQL", "Sep 2025", Cpu,"https://simpli-web.app.link/e/FOAQGfNLu4b"],
   ["Simplilearn", "Fundamentalls of Database", "Jul 2025", Globe2,"https://simpli-web.app.link/e/Xlf9OvNLu4b"],
@@ -195,6 +195,7 @@ export const education = [
     degree: "Intermediate in MPC",
     cgpa: "967 / 1000",
     metricLabel: "Marks",
+    graduationLabel: "Passed Out",
     graduation: "2023"
   },
   {
@@ -202,6 +203,7 @@ export const education = [
     degree: "SSC",
     cgpa: "534 / 600",
     metricLabel: "Marks",
+    graduationLabel: "Passed Out",
     graduation: "2021"
   }
 

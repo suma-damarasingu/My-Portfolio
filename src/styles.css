@@ -76,7 +76,7 @@ textarea:focus-visible {
   outline-offset: 3px;
 }
 
-.light body,
+/* .light body,
 .light .bg-ink {
   background:
     radial-gradient(circle at 18% 8%, rgba(37, 99, 235, 0.14), transparent 28rem),
@@ -263,8 +263,231 @@ textarea:focus-visible {
 
 .light .footer-shell a:hover {
   color: #0f172a;
+} */
+/* ==========================================================================
+   UPDATED LIGHT MODE OVERRIDES
+   ========================================================================== */
+
+.light {
+  color-scheme: light;
+  /* Balanced, soft foundations for excellent readability without pure-white eye strain */
+  --bg: #f8fafc; 
+  --panel: rgba(255, 255, 255, 0.85);
+  --panel-strong: rgba(255, 255, 255, 0.95);
+  --line: rgba(148, 163, 184, 0.16);
+  --line-strong: rgba(100, 116, 139, 0.24);
+  --text-soft: #475569;
+  
+  /* Vibrant, high-contrast light mode accents compliant with WCAG accessibility */
+  --cyan: #06b6d4;
+  --blue: #2563eb;
+  --violet: #7c3aed;
 }
 
+.light body,
+.light .bg-ink {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(37, 99, 235, 0.08), transparent 30rem),
+    radial-gradient(circle at 82% 14%, rgba(124, 58, 237, 0.06), transparent 28rem),
+    radial-gradient(circle at 50% 96%, rgba(6, 182, 212, 0.05), transparent 36rem),
+    var(--bg);
+  color: #0f172a;
+}
+
+.light body::selection {
+  color: #ffffff;
+  background: rgba(37, 99, 235, 0.85);
+}
+
+.light .text-white {
+  color: #0f172a;
+}
+
+.light .text-slate-300,
+.light .text-slate-400,
+.light .text-slate-200 {
+  color: #475569;
+}
+
+.light header,
+.light .glass-panel,
+.light .search-box,
+.light .field input,
+.light .field textarea,
+.light .stat-box,
+.light .footer-shell {
+  border-color: var(--line);
+  background: var(--panel);
+  box-shadow: 
+    0 4px 6px -1px rgba(15, 23, 42, 0.03),
+    0 20px 40px -4px rgba(15, 23, 42, 0.05);
+}
+
+.light header {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(24px);
+}
+
+.light .mobile-menu {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+
+.light .brand-mark {
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.8), 
+    0 10px 25px rgba(37, 99, 235, 0.12);
+}
+
+.light .section-title {
+  color: #0f172a;
+}
+
+.light .section-eyebrow {
+  color: var(--blue);
+}
+
+.light .section-shell::before {
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.2), transparent);
+}
+
+.light .glass-panel {
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.light .glass-panel::before {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.04), transparent 50%, rgba(124, 58, 237, 0.03));
+}
+
+.light .interactive-card:hover,
+.light .project-card:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 
+    0 30px 60px rgba(15, 23, 42, 0.08), 
+    0 0 0 1px rgba(37, 99, 235, 0.04);
+  background: var(--panel-strong);
+}
+
+.light .btn-primary {
+  background: linear-gradient(135deg, #06b6d4 0%, #2563eb 50%, #6d28d9 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.35);
+}
+
+.light .btn-secondary {
+  border-color: rgba(148, 163, 184, 0.3);
+  background: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.02);
+}
+
+.light .btn-primary:hover,
+.light .btn-secondary:hover,
+.light .chip:hover,
+.light .icon-btn:hover,
+.light .social-link:hover {
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 12px 28px -4px rgba(37, 99, 235, 0.2);
+}
+
+.light .nav-link {
+  color: #475569;
+}
+
+.light .nav-link:hover,
+.light .nav-link-active {
+  background: rgba(37, 99, 235, 0.06);
+  color: #0f172a;
+}
+
+.light .icon-btn,
+.light .social-link {
+  color: #1e293b;
+  border-color: rgba(148, 163, 184, 0.25);
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.light .pill,
+.light .tag,
+.light .chip {
+  border-color: rgba(37, 99, 235, 0.2);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(124, 58, 237, 0.04));
+  color: #1e40af;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.light .chip-active {
+  border-color: rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(124, 58, 237, 0.08));
+  color: #1d4ed8;
+}
+
+.light .field {
+  color: #334155;
+}
+
+.light .search-box {
+  color: #64748b;
+}
+
+.light .search-box input,
+.light .field input,
+.light .field textarea {
+  color: #0f172a;
+}
+
+.light .search-box input::placeholder,
+.light .field input::placeholder,
+.light .field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.light .field input:focus,
+.light .field textarea:focus,
+.light .search-box:focus-within {
+  border-color: rgba(37, 99, 235, 0.5);
+  box-shadow: 
+    0 0 0 4px rgba(37, 99, 235, 0.1), 
+    0 12px 24px rgba(15, 23, 42, 0.05);
+  background: #ffffff;
+}
+
+.light .stat-box {
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+}
+
+.light .stat-box span {
+  color: #64748b;
+}
+
+.light .stat-box strong {
+  color: #0f172a;
+}
+
+.light .certificate-art {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.05));
+}
+
+.light .project-image-wrap::after {
+  background: linear-gradient(180deg, transparent 50%, rgba(15, 23, 42, 0.08));
+}
+
+.light .footer-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), #f1f5f9);
+  border-color: rgba(148, 163, 184, 0.2);
+  color: #475569;
+}
+
+.light .footer-shell a {
+  color: #334155;
+}
+
+.light .footer-shell a:hover {
+  color: #0f172a;
+}
 .site-shell {
   position: relative;
   overflow: clip;
